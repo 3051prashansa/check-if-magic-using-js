@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    var n,b,sum=0, z, revsum=0,a,x;
+    n=parseInt(prompt("Enter the no. to check if magic:"))
+    z=n;
+    while(n!=0){
+        b=n%10;
+        sum=sum+b;
+        n=parseInt(n/10);
+    }
+    x=sum;
+    while(sum!=0){
+        a=sum%10;
+        revsum=revsum*10+a;
+        sum=parseInt(sum/10);
+    }
+    if((revsum*x)==z){
+        document.write("Magic No.")
+    }
+    else{
+        document.write("Not Magic No.")
+    }
+</script>
+</html>
